@@ -1,16 +1,134 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Tutor Selection UI — EduSelect
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A modern, responsive Tutor Selection interface built with React and Tailwind CSS. Users can browse tutors, select up to 3 tutors for demo sessions, and manage selections with an interactive UI.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 🚀 Features
 
-## Expanding the ESLint configuration
+* Responsive Tutor Listing Grid
+* Select up to 3 Tutors
+* Selected Tutors Sidebar (Desktop)
+* Selected Tutors Popup (Mobile)
+* Custom Snackbar Notifications
+* Smooth Card Animations
+* Professional UI Design
+* Reusable Components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# 🛠 Tech Stack Used
+
+* React.js
+* Tailwind CSS
+* Vite
+* Lucide React Icons
+* Framer Motion (for animations)
+
+---
+
+# 📦 Setup Instructions
+
+## 1. Clone Repository
+
+```bash
+git clone https://github.com/your-username/tutor-selection-ui.git](https://github.com/Prashantpal123/TutorTask.git
+```
+
+## 2. Install Dependencies
+
+```bash
+npm install
+```
+
+## 3. Start Development Server
+
+```bash
+npm run dev
+```
+
+Project will run on:
+
+```
+http://localhost:5173
+```
+
+---
+
+# 📱 Responsive Behaviour
+
+Desktop
+
+* Tutor grid layout
+* Selected tutors sidebar
+
+Tablet
+
+* Adjusted grid layout
+* Compact sidebar
+
+Mobile
+
+* Floating selected button
+* Bottom popup for selected tutors
+
+---
+
+# ⚙️ Selection Logic
+
+* User can select maximum 3 tutors
+* Selected tutors are visually highlighted
+* Disabled state shown when limit reached
+* Remove tutor from selected list
+* Confirm demo request
+
+---
+
+# 🔔 Snackbar Types
+
+* Success
+* Error
+* Warning
+
+Used for:
+
+* Selection limit reached
+* Demo confirmation
+* Validation messages
+
+---
+
+# 🎨 UI Highlights
+
+* Modern dark theme
+* Hover animations
+* Gradient cards
+* Smooth transitions
+* Professional spacing
+
+---
+
+# 📌 Assumptions Made
+
+* Tutor data is static (mock data used)
+* No backend API integration required
+* Navbar was added to enhance overall UI and user experience
+*Search bar implemented as a dummy UI 
+* User authentication not required
+
+---
+
+
+
+# 👨‍💻 Author
+
+Prashant Pal
+Frontend Developer (React + MERN)
+
+---
+
+# 📄 License
+
+This project is for assessment/demo purposes only.
