@@ -37,19 +37,13 @@ A modern, responsive Tutor Selection interface built with React and Tailwind CSS
 git clone https://github.com/your-username/tutor-selection-ui.git](https://github.com/Prashantpal123/TutorTask.git
 ```
 
-## 2. Navigate to Project
-
-```bash
-cd tutor
-```
-
-## 3. Install Dependencies
+## 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-## 4. Start Development Server
+## 3. Start Development Server
 
 ```bash
 npm run dev
