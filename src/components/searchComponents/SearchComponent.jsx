@@ -1,4 +1,4 @@
-import SearchBar from "./SearchBar";
+import SearchBar from "./SearchBar.jsx";
 import { useState } from "react";
 
 const SearchComponent = () => {
