@@ -34,7 +34,7 @@ A modern, responsive Tutor Selection interface built with React and Tailwind CSS
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/tutor-selection-ui.git
+git clone https://github.com/your-username/tutor-selection-ui.git](https://github.com/Prashantpal123/TutorTask.git
 ```
 
 ## 2. Navigate to Project
