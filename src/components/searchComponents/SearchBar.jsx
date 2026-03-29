@@ -9,7 +9,7 @@ const SearchBar = ({ search, setSearch }) => {
       <div className="relative  sm:flex-1">
         <Search 
           className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400"
-          size={20}
+          size={16}
         />
 
         <input
@@ -18,7 +18,10 @@ const SearchBar = ({ search, setSearch }) => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="
-          w-full
+          w-57.5
+          sm:w-75
+          lg:w-75
+          xl:w-125
           bg-[#071a24]
           border border-[#0f2a3a]
           text-white
@@ -50,7 +53,7 @@ const SearchBar = ({ search, setSearch }) => {
         "
       >
         <SlidersHorizontal size={14} />
-        <span className="hidden sm:block ml-1">Filter</span>
+        <span className=" ml-1">Filter</span>
       </button>
 
     </div>

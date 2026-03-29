@@ -10,7 +10,7 @@ const TutorListing = () => {
   const [selectedTutors, setSelectedTutors] = useState([])
   const [showSelected, setShowSelected] = useState(false)
   const [snackbar, setSnackbar] = useState({open: false,message: "", type: "success"})
-
+  const [shakeId, setShakeId] = useState(null)
   const handleSelect = (tutor) => {
     const exists = selectedTutors.find((t) => t.id === tutor.id)
 
@@ -21,7 +21,12 @@ const TutorListing = () => {
 
     if (selectedTutors.length === 3) {
         setSnackbar({   open: true,message: "You can only select up to 3 tutors", type: "error"
+        
     })
+    setShakeId(tutor.id)
+     setTimeout(() => {
+      setShakeId(null)
+    }, 500)
     return
     }
 
@@ -45,7 +50,7 @@ const TutorListing = () => {
   }
 
   return (
-    <div className="min-h-screen p-4 md:p-6 flex flex-col md:flex-row gap-6">
+    <div className="min-h-screen md:ml-18 p-4 md:p-6 flex flex-col md:flex-row gap-6">
 
       {/* Left Content */}
       <div className="flex-1">
@@ -59,7 +64,7 @@ const TutorListing = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-2 mdlg:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 justify-center gap-6">
          {tutors.map((tutor, index) => (
          <motion.div key={tutor.id} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} whileHover={{ y: -5 }} transition={{ duration: 0.4, delay: index * 0.08 }}>
-             <TutorCard tutor={tutor} isSelected={selectedTutors.some(   (t) => t.id === tutor.id   )} onSelect={handleSelect}  />
+             <TutorCard tutor={tutor} isSelected={selectedTutors.some(   (t) => t.id === tutor.id   )} isShaking={shakeId === tutor.id} onSelect={handleSelect}  />
          </motion.div>
         ))}
        </div>
@@ -86,7 +91,7 @@ const TutorListing = () => {
 
           <div className="  bg-[#031a29]  w-full  rounded-t-2xl  p-4 max-h-[80vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-white text-lg font-semibold">  Selected Tutors </h2>
+                    <h2 className="text-white text-lg font-semibold">  Seleffcted Tutors </h2>
                     <button onClick={() => setShowSelected(false)}  className="text-white text-xl" >  ✕ </button>
               </div>
                 <SelectedTutors selected={selectedTutors} removeTutor={removeTutor} confirmDemo={confirmDemo} />

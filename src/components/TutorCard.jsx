@@ -1,8 +1,8 @@
-const TutorCard = ({ tutor, isSelected, onSelect, isMaxReached }) => {
+const TutorCard = ({ tutor, isSelected, onSelect, isMaxReached, isShaking  }) => {
   const isDisabled = isMaxReached && !isSelected;
 
   return (
-    <div onClick={() => !isDisabled && onSelect(tutor)} className={` relative w-70 rounded-2xl overflow-hidden bg-linear-to-b from-[#071923] to-[#02080d]
+    <div onClick={() => !isDisabled && onSelect(tutor)} className={` relative w-70 rounded-2xl ${isShaking ? "animate-shake" : ""} overflow-hidden bg-linear-to-b from-[#071923] to-[#02080d]
       border border-[#0f2a3a] transition-all duration-300 cursor-pointer hover:shadow-[0_0_25px_rgba(0,180,255,0.15)]
       ${isSelected ? "ring-2 ring-blue-500 shadow-lg" : ""}
       ${isDisabled ? "opacity-40 pointer-events-none" : ""}
